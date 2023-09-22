@@ -1,0 +1,44 @@
+/* newss.css */
+
+/* Ana konteyner */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Haber kutularını yatayda dağıtır */
+}
+
+/* Haber kutusu */
+.news-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Haber görseli */
+.news-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Haber başlığı */
+.news-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+/* Haber alt başlığı */
+.news-author {
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Haber içeriği */
+.news-content {
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: bold;
+}

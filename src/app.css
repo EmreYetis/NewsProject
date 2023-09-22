@@ -1,0 +1,9 @@
+body {
+  background-color: rgb(219, 200, 165);
+}
+.news > h1 {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  color: rgb(90, 126, 224);
+}
