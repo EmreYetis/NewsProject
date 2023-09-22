@@ -3,7 +3,8 @@ import axios from "axios";
 import "./newss.css"; // CSS dosyasını içe aktarın
 
 function Newss() {
-  const key = "";
+  const key = process.env.REACT_APP_API_KEY;
+
   const [news, setNews] = useState([]);
 
   useEffect(() => {
