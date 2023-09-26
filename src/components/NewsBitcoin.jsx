@@ -30,13 +30,18 @@ function NewsBitcoin() {
     }
   };
   return (
-    <div className="container">
+    <div className="flex flex-wrap justify-around">
       {news.map((item, index) => (
-        <div key={index} className="news-box">
-          <img className="news-image" src={item.urlToImage} alt="" />
-          <h1 className="news-title">{item.title}</h1>
-          <p className="news-author">{item.author}</p>
-          <p className="news-content">{limitContent(item.content, 150)}</p>
+        <div
+          key={index}
+          className="border border-gray-300 p-5 m-4 w-72 text-center rounded-lg shadow-md"
+        >
+          <img className="max-w-full h-auto" src={item.urlToImage} alt="" />
+          <h1 className="text-2xl mt-4">{item.title}</h1>
+          <p className="text-base text-gray-500">{item.author}</p>
+          <p className="text-base font-semibold mt-2">
+            {limitContent(item.content, 150)}
+          </p>
         </div>
       ))}
     </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Carousel } from "react-bootstrap"; // react-bootstrap'dan Carousel bileşenini içe aktarın
-import "./newss.css"; // CSS dosyasını içe aktarın
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Carousel için stil dosyasını içe aktarın
+import { Carousel } from "react-responsive-carousel"; // Carousel bileşenini içe aktarın
 
 function Newss() {
   const key = process.env.REACT_APP_API_KEY;
@@ -32,25 +32,31 @@ function Newss() {
     }
   };
 
-  // Slider için yeni state'ler ekleyin
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
   return (
-    <div className="container">
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+    <div className="container m-auto">
+      <Carousel
+        showThumbs={false}
+        showStatus={false}
+        infiniteLoop={true}
+        autoPlay={true}
+        className="mt-6 max-w-4xl mx-auto" // Carousel bileşenine üst boşluk ekleyin
+      >
         {news.map((item, index) => (
-          <Carousel.Item key={index}>
-            <img className="news-image" src={item.urlToImage} alt="" />
-            <Carousel.Caption>
-              <h1 className="news-title">{item.title}</h1>
-              <p className="news-author">{item.author}</p>
-              <p className="news-content">{limitContent(item.content, 150)}</p>
-            </Carousel.Caption>
-          </Carousel.Item>
+          <div
+            key={index}
+            className="news-box p-4 border border-gray-300 rounded-lg shadow-md"
+          >
+            <img
+              className="news-image max-w-full h-auto"
+              src={item.urlToImage}
+              alt=""
+            />
+            <h1 className="news-title text-xl font-bold mt-4">{item.title}</h1>
+            <p className="news-author text-base text-gray-500">{item.author}</p>
+            <p className="news-content text-base font-semibold mt-2">
+              {limitContent(item.content, 150)}
+            </p>
+          </div>
         ))}
       </Carousel>
     </div>
