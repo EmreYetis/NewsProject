@@ -20,7 +20,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/sports" className="text-white hover:underline">
+            <Link to="/spor" className="text-white hover:underline">
               SPORTS
             </Link>
           </li>
