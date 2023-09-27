@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Carousel için stil dosyasını içe aktarın
 import { Carousel } from "react-responsive-carousel"; // Carousel bileşenini içe aktarın
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Newss() {
   const key = process.env.REACT_APP_API_KEY;
@@ -35,18 +36,15 @@ function Newss() {
   return (
     <div className="container m-auto">
       <Carousel
-        showThumbs={false}
-        showStatus={false}
+        showIndicators={false}
+        showThumbs={true}
         infiniteLoop={true}
         autoPlay={true}
         className="mt-6 max-w-4xl mx-auto" // Carousel bileşenine üst boşluk ekleyin
       >
         {news.map((item, index) => (
-          <div
-            key={index}
-            className="news-box p-4 border border-gray-300 rounded-lg shadow-md"
-          >
-            <img
+          <div key={index} className="news-box border p-4 rounded-lg shadow-md">
+            <LazyLoadImage
               className="news-image max-w-full h-auto"
               src={item.urlToImage}
               alt=""
