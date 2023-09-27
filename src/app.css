@@ -1,5 +1,8 @@
 body {
-  background-color: rgb(219, 200, 165);
+  background-color: rgb(255, 255, 255);
+}
+.button-special{
+  font-family: 'Kanit', sans-serif;
 }
 .news > h1 {
   font-size: 4rem;
