@@ -4,13 +4,15 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="bg-blue-500 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-white text-2xl">
+      <div className="container mx-auto ">
+      <div className="grid-rows-1 grid-cols-3 flex justify-between items-center">
+      <div>  <Link to="/" className="text-white text-2xl">
           BATEM News
-        </Link>
+        </Link></div>
+        <div className="hidden md:block">
         <ul className="flex space-x-4">
           <li>
-            <Link to="/general" className="text-white hover:underline">
+            <Link to="/" className="text-white hover:underline">
               GENERAL
             </Link>
           </li>
@@ -20,7 +22,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/sports" className="text-white hover:underline">
+            <Link to="/spor" className="text-white hover:underline">
               SPORTS
             </Link>
           </li>
@@ -45,10 +47,12 @@ function Navbar() {
             </Link>
           </li>
         </ul>
+        </div>
+        <div>
         <ul className="flex gap-4 text-white">
           <li>
             <div className="button-special text-black font-mono w-20 h-7 border rounded-full text-center bg-white border-indigo-800">
-              <Link to="/login">
+              <Link to="/pages/Login">
                 LOGİN
               </Link>
             </div>
@@ -58,9 +62,12 @@ function Navbar() {
               <Link to="/signup">
                 SİGN UP
               </Link>
+            
             </div>
           </li>
         </ul>
+        </div>
+        </div>
       </div>
     </nav>
   );
