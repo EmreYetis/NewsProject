@@ -2,7 +2,7 @@ import React from 'react'
 
 function Login() {
   return (
-    <div className='container  mx-auto text-center border w-2/6 m-8 pb-5'>
+    <div className='container  mx-auto text-center border w-3/6 m-8 pb-5 shadow-xl'>
       <div className='grid grid-rows-1 grid-cols-2 mx-auto  border-2 rounded-t-lg  '>
         <div className='col-span-1 h-10 text-lg bg-gray-300 font-bold text-gray-500 block'> <a href='#'>SİGN İN</a> </div>
         <div className=' col-span-1 h-10 bg-red-600 text-white text-lg font-bold  '><a href='#'>LOGİN</a></div> </div>
@@ -45,11 +45,11 @@ function Login() {
   </div>
   <div className='col-span-1 flex justify-center mt-4 mx-20 border rounded-full'>
   <img width="48" height="48" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new"/>
-  <a className='font-serif  px-2 py-2' href='#'>Facebook ile Devam Et</a>
+  <a className='font-serif  px-2 py-2' href='#'>Continue with Facebook</a>
   </div>
   <div className='col-span-1 flex justify-center mt-4 mx-20 border rounded-full'>
   <img width="48" height="48" src="https://img.icons8.com/fluency/48/google-logo.png" alt="google-logo"/>
-  <a className='font-serif  px-2 py-2' href='#'>Facebook ile Devam Et</a>
+  <a className='font-serif  px-4 py-2' href='#'>Continue with Google</a>
   </div>
 </div>
  
