@@ -44,7 +44,7 @@ function NewsBitcoin() {
             alt=""
           />
           <h1 className="text-2xl mt-4">{item.title}</h1>
-          <p className="text-base text-gray-500">{item.author}</p>
+          <p className="text-base text-gray-500 truncate">{item.author}</p>
           <p className="text-base font-semibold mt-2">
             {limitContent(item.content, 150)}
           </p>

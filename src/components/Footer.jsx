@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -16,16 +17,24 @@ function Footer() {
             <h2 className="text-xl font-semibold">Hızlı Bağlantılar</h2>
             <ul className="mt-2">
               <li className="p-0.5">
-                <a href="/">Anasayfa</a>
+                <Link to="/" className="text-white text-l">
+                  Anasayfa
+                </Link>
               </li>
               <li className="p-0.5">
-                <a href="#">Hakkımızda</a>
+                <Link to="/" className="text-white text-l">
+                  Hakkımızda
+                </Link>
               </li>
               <li className="p-0.5">
-                <a href="#">Hizmetler</a>
+                <Link to="/" className="text-white text-l">
+                  Hizmetler
+                </Link>
               </li>
               <li className="p-0.5">
-                <a href="#">İletişim</a>
+                <Link to="/" className="text-white text-l">
+                  İletişim
+                </Link>
               </li>
             </ul>
           </div>
