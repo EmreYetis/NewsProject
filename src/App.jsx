@@ -10,6 +10,9 @@ import Technology from "./components/categorys/Technology";
 import Health from "./components/categorys/Health";
 import Science from "./components/categorys/Science";
 import Entertainment from "./components/categorys/Entertainment";
+import Hakkimizda from "./components/footerPages/Hakkimizda";
+import Hizmetler from "./components/footerPages/Hizmetler";
+import Iletisim from "./components/footerPages/Iletisim";
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
             <Route path="/health" element={<Health />} />
             <Route path="/science" element={<Science />} />
             <Route path="/entertainment" element={<Entertainment />} />
+            <Route path="/hakkimizda" element={<Hakkimizda />} />
+            <Route path="/hizmetler" element={<Hizmetler />} />
+            <Route path="/iletisim" element={<Iletisim />} />
             Science
           </Routes>
           <Routes>

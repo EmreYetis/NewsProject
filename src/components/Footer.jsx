@@ -22,17 +22,17 @@ function Footer() {
                 </Link>
               </li>
               <li className="p-0.5">
-                <Link to="/" className="text-white text-l">
+                <Link to="/hakkimizda" className="text-white text-l">
                   Hakkımızda
                 </Link>
               </li>
               <li className="p-0.5">
-                <Link to="/" className="text-white text-l">
+                <Link to="/hizmetler" className="text-white text-l">
                   Hizmetler
                 </Link>
               </li>
               <li className="p-0.5">
-                <Link to="/" className="text-white text-l">
+                <Link to="/iletisim" className="text-white text-l">
                   İletişim
                 </Link>
               </li>
